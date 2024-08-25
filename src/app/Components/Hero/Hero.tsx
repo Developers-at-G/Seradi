@@ -11,15 +11,22 @@ const Hero = () => {
         s["hero"]
       )}
     >
-        <HeaderMenu/>
+      <HeaderMenu />
       <div className="flex flex-col bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed">
         <section className="text-white py-20 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-sans">
             Appartement de luxe à Ouakam
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl max-w-2xl mx-auto font-sans">
-            Le meilleur dans la cite
-          </p>
+          <div className={cx('text-2xl sm:text-3xl lg:text-4xl font-sans overflow-hidden mt-6 uppercase', s[' hero-animated-text'])}>
+          <h3>
+            Trouver votre{" "}
+            <h3 className={cx(s['hero--rotating-text'], 'bold')}>
+              <h3 className={cx ('bold')}>espace</h3>
+              <h3 className={cx ('bold')}>place</h3>
+              <h3 className={cx ('bold')}>maison</h3>
+            </h3>
+          </h3>
+        </div>
         </section>
       </div>
     </div>

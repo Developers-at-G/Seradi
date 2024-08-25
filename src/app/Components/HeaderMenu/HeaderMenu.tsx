@@ -3,7 +3,7 @@ import React from 'react'
 const HeaderMenu = () => {
   return (
     <nav className="p-4 text-white">
-        <div className='flex'>
+        <div className='flex items-center'>
         <div className='flex justify-start w-full items-center'>
             <Image src= "/Images/Logo.png" width={106} height={130} alt='logo'/>
             <div>
