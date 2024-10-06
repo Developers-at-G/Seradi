@@ -3,13 +3,17 @@ import AnimatedTextPanel from "./Components/Animated Text Panel/AnimatedTextPane
 import Container from "./Components/Container/Container";
 import Footer from "./Components/Footer/Footer";
 import Hero from "./Components/Hero/Hero";
+import TextWithMedia from "./Components/Text With Media/TextWithMedia";
+import TextWithDescription from "./Components/TextPanelWithDescription/TextWithDescription";
 
 export default function Home() {
   return (
-    <Container>
+    <div className="bg-white">
       <Hero/>
       <AnimatedTextPanel/>
+      <TextWithMedia/>
+      <TextWithDescription/>
       <Footer/>
-    </Container>
+    </div>
   );
 }

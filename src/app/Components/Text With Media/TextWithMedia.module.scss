@@ -1,0 +1,16 @@
+.text-with-media {
+
+    &__text {
+        max-width: 430px;
+    }
+    &__title, &__body {
+        color: #303468;
+    }
+    &__title {
+        font-size: 48px;
+        font-size: bold;
+    }
+    &__body {
+        font-size: 24px;
+    }
+}

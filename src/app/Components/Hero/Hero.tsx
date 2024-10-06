@@ -12,7 +12,7 @@ const Hero = () => {
       )}
     >
       <HeaderMenu />
-      <div className="flex flex-col bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed">
+      <div className="flex flex-col bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed justify-center">
         <section className="text-white py-20 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-sans">
             Appartement de luxe à Ouakam

@@ -1,23 +1,21 @@
 .animated-text-panel {
-    height: 100vh;
-    margin-top: 200px;
+    &__title {
+        color: white;
+        background-color: #303468;
+        padding: 8px;
+        width: fit-content;
+        border-radius: 12px;
+        text-align: center;
+        position: relative;
+        top: 0;
+        right: -50%;
+        transform: translate(-50%, 0);
+    }
+    color: #303468;
     h1 {
       line-height: 5rem;
     }
   }
-  /* AnimatedTextPanel.module.css */
-
   
-  .textHighlight {
-    background-color: yellow; /* Change this to your desired background color */
-    color: red; /* Change this to your desired text color */
-    padding: 0 5px;
-    display: inline-block;
-  }
-  
-  .normalText {
-    display: inline-block;
-    overflow: hidden;
-  }
   
   
