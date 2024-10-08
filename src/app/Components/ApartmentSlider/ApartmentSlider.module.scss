@@ -1,0 +1,40 @@
+/* ApartmentSlider.css */
+
+.apartment-slider {
+  max-width: 1200px;
+  margin: 50px auto 0; /* Add margin-top: 50px */
+  text-align: left; 
+
+    &__card {
+      background: #303468;
+      border-radius: 8px;
+      margin: 20px 0 40px 0;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    &__image {
+      width: 100%;
+      border-radius: 8px;
+    }
+    &__info h3 {
+      font-size: 18px;
+      margin-top: 10px;
+      color: white;
+    }
+  }
+  
+  .apartment-slider h2 {
+    
+  font-size: 24px;
+  color: #333;
+  text-align: left;
+  }
+  
+  .apartment-slider p {
+    font-size: 16px;
+    color: #666;
+    text-align: left;
+
+  }
+  
+  
