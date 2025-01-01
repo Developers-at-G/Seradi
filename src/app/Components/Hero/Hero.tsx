@@ -7,26 +7,26 @@ const Hero = () => {
   return (
     <div
       className={cx(
-        "relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 pt-0 text-center",
+        "relative min-h-screen overflow-hidden bg-cover bg-no-repeat",
         s["hero"]
       )}
     >
-      <HeaderMenu />
-      <div className="flex flex-col bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed justify-center">
-        <section className="text-white py-20 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-sans">
+      <div className="absolute inset-0 bg-black/40 z-10" />
+      <div className="relative z-20 flex min-h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
+        <section className="text-white text-center max-w-5xl mx-auto">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-8 font-sans tracking-tight">
             Appartement de luxe à Ouakam
           </h1>
-          <div className={cx('text-2xl sm:text-3xl lg:text-4xl font-sans overflow-hidden mt-6 uppercase', s[' hero-animated-text'])}>
-          <h3>
-            Trouver votre{" "}
-            <h3 className={cx(s['hero--rotating-text'], 'bold')}>
-              <h3 className={cx ('bold')}>espace</h3>
-              <h3 className={cx ('bold')}>place</h3>
-              <h3 className={cx ('bold')}>maison</h3>
-            </h3>
-          </h3>
-        </div>
+          <div className={cx('mt-8', s['animated-text-container'])}>
+            <p className="text-xl sm:text-2xl lg:text-3xl font-light mb-4">
+              Trouver votre
+              <span className={cx(s['rotating-text-wrapper'], 'inline-block ml-3 font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600')}>
+                <span className={s['rotating-text']}>espace</span>
+                <span className={s['rotating-text']}>place</span>
+                <span className={s['rotating-text']}>maison</span>
+              </span>
+            </p>
+          </div>
         </section>
       </div>
     </div>

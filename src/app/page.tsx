@@ -7,16 +7,22 @@ import Hero from "./Components/Hero/Hero";
 import ImageSlider from "./Components/ImageSlider/ImageSlider";
 import TextWithMedia from "./Components/Text With Media/TextWithMedia";
 import TextWithDescription from "./Components/TextPanelWithDescription/TextWithDescription";
+import ContactForm from "./Components/ContactForm/ContactForm";
+import SaleCondition from "./Components/SaleCondition/SaleCondition";
+import HeaderMenu from "./Components/HeaderMenu/HeaderMenu";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-gray-900">
+       <HeaderMenu />
       <Hero/>
       <AnimatedTextPanel/>
       <TextWithMedia/>
       <TextWithDescription/>
       <ImageSlider/>
       <ApartmentSlider/>
+      <SaleCondition/>
+      <ContactForm/>
       <Footer/>
     </div>
   );

@@ -1,16 +1,26 @@
 .text-with-media {
 
-    &__text {
-        max-width: 430px;
+  &__body {
+    position: relative;
+    padding-left: 1rem;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, #1e40af, #3b82f6);
+      border-radius: 4px;
     }
-    &__title, &__body {
-        color: #303468;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-with-media {
+    &__media {
+      margin-top: 2rem;
     }
-    &__title {
-        font-size: 48px;
-        font-size: bold;
-    }
-    &__body {
-        font-size: 24px;
-    }
+  }
 }
