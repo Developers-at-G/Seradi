@@ -7,6 +7,8 @@ const ProjectTab = () => {
   return (
     <section id="projet" className="py-20 px-4">
       <div className="relative max-w-3xl mx-auto px-4 md:px-8">
+      <div className="text-center text-[#FF8A3D] text-4xl md:text-6xl font-bold mb-16">Nos Projets</div>
+
         <Link href="/seradi">
           <motion.div
             whileHover={{ scale: 1.02 }}
