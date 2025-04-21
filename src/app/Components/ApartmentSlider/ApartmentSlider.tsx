@@ -12,7 +12,7 @@ const BuildingAmenities = () => {
   const isInView = useInView(containerRef, { once: true, amount: 0.2 });
 
   const amenities = [
-    { id: 1, name: 'Salle de Sport', image: '/Images/gym.png', description: 'Équipement moderne et spacieux' },
+    { id: 1, name: 'Salle de Sport', image: '/Images/sport.png', description: 'Équipement moderne et spacieux' },
     { id: 2, name: 'Piscine', image: '/Images/piscine-new.jpeg', description: 'Piscine intérieure' },
     { id: 3, name: 'Espace Commune', image: '/Images/espace.jpeg', description: 'Corridors élégants' },
     { id: 4, name: 'Bureaux', image: '/Images/bureau-2.png', description: 'Espaces de travail professionnels' },
