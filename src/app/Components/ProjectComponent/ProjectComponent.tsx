@@ -16,11 +16,11 @@ const ProjectComponent = () => {
         <div className="text-center mb-20">
           <h2 className="text-base font-semibold text-[#FF8A3D] tracking-wide uppercase">Découvrez</h2>
           <h1 className="mt-3 text-5xl font-extrabold text-white sm:text-6xl">
-            Nos Projets
+           SERADI
           </h1>
           <div className="mt-4 max-w-2xl mx-auto">
             <p className="text-xl text-gray-400">
-              Une résidence d&apos;exception alliant architecture moderne et confort premium
+              Une cadre prestigieux
             </p>
           </div>
         </div>
