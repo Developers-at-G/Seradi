@@ -1,0 +1,115 @@
+.hero {
+  /* Default: Mobile styles */
+  background-image: url('/Images/Residence_Seradi_Mobile_Cropped.png');
+  animation: kenBurns 20s infinite alternate ease-in-out;
+
+  /* Desktop override */
+  @media (min-width: 769px) { /* Apply when width is 769px or more */
+    background-image: url('/Images/AtlcanticImmo.jpeg');
+  }
+
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.title-animation {
+  animation: revealFromCenter 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.typing-text {
+  display: inline-block;
+}
+
+.word-carousel {
+  display: inline-block;
+  position: relative;
+  /* Adjust width/height as needed for your font/content */
+  width: 150px;
+  height: 50px; /* Make sure this fits the tallest word comfortably */
+  vertical-align: middle; /* Or adjust as needed */
+  margin-left: 10px; /* Spacing from 'Trouver votre' */
+  overflow: hidden; /* Clip the words animating in/out */
+  text-align: left; /* Align text within the carousel */
+}
+
+.word {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0; /* Start positioning from the top */
+  height: 100%; /* Ensure word takes full height for alignment */
+  display: flex; /* Use flex for vertical centering */
+  align-items: center; /* Center vertically */
+  opacity: 0; /* Start hidden */
+  transform: translateY(100%); /* Start below the view */
+  /* Each word animation cycle: enter, stay, exit */
+  /* Total cycle 9s = 3s per word */
+  animation: slideUpFade 9s infinite ease-in-out;
+
+  /* Remove old glow/shadow styles */
+  /* text-shadow: 0 0 8px rgba(255,255,255,0.5); */
+  /* &::before { ... } */
+
+  &:nth-child(1) {
+    animation-delay: 0s; /* Start immediately */
+  }
+
+  &:nth-child(2) {
+    animation-delay: 3s; /* Start after the first word's cycle */
+  }
+
+  &:nth-child(3) {
+    animation-delay: 6s; /* Start after the second word's cycle */
+  }
+}
+
+/* Remove old keyframes */
+/* @keyframes glowingWord { ... } */
+/* @keyframes slidingGlow { ... } */
+
+/* New simpler animation */
+@keyframes slideUpFade {
+  0% { /* Start position */
+    opacity: 0;
+    transform: translateY(50%); /* Start slightly below */
+  }
+  10% { /* Slide in and fade in */
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  33% { /* Hold position */
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  43% { /* Start sliding out and fading out */
+    opacity: 0;
+    transform: translateY(-50%); /* Slide upwards */
+  }
+  100% { /* Fully out */
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes revealFromCenter {
+  0% {
+    opacity: 0;
+    letter-spacing: 15px;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: normal;
+    filter: blur(0);
+  }
+}
+
+@keyframes kenBurns {
+  from {
+    transform: scale(1.0);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}

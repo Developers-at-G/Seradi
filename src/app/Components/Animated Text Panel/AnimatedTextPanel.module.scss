@@ -1,0 +1,23 @@
+.animated-text-panel {
+    &__title {
+        padding: 8px;
+        width: fit-content;
+        border-radius: 12px;
+        text-align: center;
+        position: relative;
+        top: 0;
+        right: -50%;
+        transform: translate(-50%, 0);
+    }
+    color: #303468;
+    h1 {
+      line-height: 5rem;
+    }
+    &__map-section {
+        background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+        backdrop-filter: blur(10px);
+    }
+  }
+  
+  
+  

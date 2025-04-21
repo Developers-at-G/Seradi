@@ -1,0 +1,26 @@
+.text-with-media {
+
+  &__body {
+    position: relative;
+    padding-left: 1rem;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, #1e40af, #3b82f6);
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .text-with-media {
+    &__media {
+      margin-top: 2rem;
+    }
+  }
+}

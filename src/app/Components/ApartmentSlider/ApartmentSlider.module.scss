@@ -1,0 +1,113 @@
+/* ApartmentSlider.css */
+
+.container {
+  width: 100%;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.amenitiesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.amenityItem {
+  flex: 1;
+  height: 400px; // Increased height for bigger images
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .amenityItem {
+    height: 300px;
+  }
+
+  .overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) 50%, transparent);
+    justify-content: flex-end;
+    padding-bottom: 1.5rem;
+    opacity: 1 !important; // Force overlay to be visible on mobile
+
+    h3 {
+      font-size: 1.5rem;
+      opacity: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      opacity: 1 !important; // Force text to be visible on mobile
+    }
+  }
+}
+
+.amenityName {
+  color: var(--primary-color);
+}
+  
+  
