@@ -112,7 +112,7 @@ const AnimatedTextPanel = () => {
           >
             <div className="max-w-4xl mx-auto bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-gray-200 shadow-xl">
               <p className="text-lg md:text-xl text-gray-800 leading-relaxed tracking-wide">
-                La résidence SERADI, se situe dans la Commune de Ouakam du coté résidentiel. Le site est très accessible car le projet vient s'insérer à l'intérieur d'un tissu urbain relativement dense, d'une part irriguée par l'Avenue Cheikh Anta Diop et de l'autre, animé par le Lycée français Jean Mermoz.
+                La résidence SERADI, se situe dans la Commune de Ouakam du coté résidentiel. Le site est très accessible car le projet vient s&apos;insérer à l&apos;intérieur d&apos;un tissu urbain relativement dense, d&apos;une part irriguée par l&apos;Avenue Cheikh Anta Diop et de l&apos;autre, animé par le Lycée français Jean Mermoz.
               </p>
             </div>
           </motion.div>
