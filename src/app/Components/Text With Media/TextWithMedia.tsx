@@ -24,7 +24,7 @@ const TextWithMedia = () => {
           className={cx('flex flex-col gap-6 md:w-1/2', s['text-with-media__text'])}
         >
           <h2 className={cx(s['text-with-media__title'], 'text-4xl md:text-5xl font-bold text-white')}>
-            A Propos de la résidence
+            A Propos de Seradi
           </h2>
           <div className="space-y-4">
             <p className={cx(s['text-with-media__body'], 'text-lg text-gray-300 leading-relaxed')}>
@@ -35,7 +35,7 @@ const TextWithMedia = () => {
                 <h3 className="text-white font-medium mb-2">Sous-sol & Rez-de-chaussée</h3>
                 <ul className="list-disc list-inside space-y-1 text-gray-300">
                   <li>Parking</li>
-                  <li>Lobby réception</li>
+                  <li>Conciergerie</li>
                   <li>Piscine</li>
                   <li>Salle de sport</li>
                   <li>Espace commercial (293 m²)</li>
@@ -54,11 +54,13 @@ const TextWithMedia = () => {
               <div className="bg-gray-800/50 p-4 rounded-lg">
                 <h3 className="text-white font-medium mb-2">Étages</h3>
                 <p className="text-gray-300">6 étages avec 24 appartements (12 F3 & 12 F4)</p>
+                <p className="text-gray-300">1 Penthouse</p>
+
               </div>
 
               <div className="bg-gray-800/50 p-4 rounded-lg">
                 <h3 className="text-white font-medium mb-2">Terrasse</h3>
-                <p className="text-gray-300">Accès privé et vue dégagée</p>
+                <p className="text-gray-300">Terrasse accessible</p>
               </div>
             </div>
           </div>

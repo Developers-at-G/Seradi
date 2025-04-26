@@ -24,7 +24,7 @@ const HeaderMenu = () => {
   const menuItems = useMemo(() => [
     { label: 'Accueil', href: '/', isHome: true },
     { label: 'Nos Projets', href: '#projet', isHome: false },
-    { label: 'Contact', href: '#contact', isHome: false },
+    { label: 'Contactez-nous', href: '#contact', isHome: false },
   ], []);
 
   useEffect(() => {

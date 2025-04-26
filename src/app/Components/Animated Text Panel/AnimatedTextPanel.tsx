@@ -68,170 +68,97 @@ const AnimatedTextPanel = () => {
   };
 
   return (
-    <div className={cx(s['animated-text-panel'], 'relative min-h-screen w-full overflow-hidden')} ref={containerRef} id="accueil">
-      <HeaderMenu />
-      
-      {/* Hero Image Background with Slider */}
-      <div className="absolute inset-0 z-0">
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.div
-            key={currentImageIndex}
-            custom={direction}
-            variants={slideVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={slideTransition}
-            className="absolute inset-0"
-          >
-            <Image
-              src={heroImages[currentImageIndex]}
-              alt="SERADI Residence"
-              fill
-              className="object-cover"
-              priority
-              quality={100}
-              sizes="100vw"
-              style={{
-                objectPosition: 'center',
-                filter: 'brightness(0.6) contrast(1.1) saturate(1.1)',
-              }}
-            />
-          </motion.div>
-        </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/70 to-gray-900/50" />
+    <>
+      <div className={cx(s['animated-text-panel'], 'relative min-h-screen w-full overflow-hidden')} ref={containerRef} id="accueil">
+        <HeaderMenu />
         
-        {/* Navigation Arrows */}
-        <div className="absolute inset-0 flex items-center justify-between px-4 z-10">
-          <motion.button
-            onClick={handlePrevImage}
-            className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </motion.button>
-          <motion.button
-            onClick={handleNextImage}
-            className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </motion.button>
-        </div>
-
-        {/* Image Indicators */}
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2 z-10">
-          {heroImages.map((_, index) => (
-            <motion.div
-              key={index}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentImageIndex ? 'bg-white' : 'bg-white/50'
-              }`}
-              initial={{ scale: 0.8 }}
-              animate={{ scale: index === currentImageIndex ? 1.2 : 0.8 }}
-              transition={{ duration: 0.2 }}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-24 md:py-32">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        {/* Title Section - Moved to top */}
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="relative z-20 text-center pt-24 pb-8"
         >
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight"
-          >
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight drop-shadow-lg">
             Résidence SERADI
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto mb-12 font-medium tracking-wide"
-          >
-            Une résidence d&apos;exception au cœur de Ouakam
-          </motion.p>
+          </h1>
+        </motion.div>
+
+        {/* Main Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-24 md:pb-32">
+          {/* Banner Section */}
           <motion.div 
-            className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-white/10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.6 }}
+            className={s['banner-static']}
           >
-            <motion.p 
-              className="text-lg md:text-xl text-gray-100 leading-relaxed tracking-wide"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-            >
-              La résidence SERADI, se situe dans la Commune de Ouakam du coté résidentiel. Le site est très accessible car le projet vient s&apos;insérer à l&apos;intérieur d&apos;un tissu urbain relativement dense, d&apos;une part irriguée par l&apos;Avenue Cheikh Anta Diop et de l&apos;autre, animé par le Lycée français Jean Mermoz.
-            </motion.p>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-16"
-        >
-          {/* Location Map */}
-          <div className="relative h-[400px] rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="/Images/3.jpg"
-              alt="Carte de localisation SERADI"
-              fill
-              className="object-cover"
-              quality={100}
+              src="/Images/banner.jpeg"
+              alt="Atlantic Immo Banner"
+              width={1200}
+              height={250}
+              priority
+              className="object-contain rounded-xl shadow-lg"
             />
-          </div>
+          </motion.div>
 
-          {/* Key Features */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 shadow-2xl border border-white/20">
-            <h2 className="text-2xl font-semibold mb-6 text-white">Environnement direct</h2>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { name: 'Hôpitaux', distance: '500 m', icon: '🏥' },
-                { name: 'Supermarché', distance: '200 m', icon: '🛒' },
-                { name: 'Plage', distance: '300 m', icon: '🏖️' },
-                { name: 'Restaurants', distance: '300 m', icon: '🍽️' },
-                { name: 'Banques', distance: '200 m', icon: '🏦' },
-                { name: 'Aéroport', distance: '70 km', icon: '✈️' },
-                { name: 'Universités', distance: '1 km', icon: '🎓' },
-                { name: 'Pharmacie', distance: '200 m', icon: '💊' },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.name}
-                  className="flex items-center gap-3 p-3 rounded-md hover:bg-white/5 transition-colors"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <span className="text-2xl">{item.icon}</span>
-                  <div>
-                    <div className="font-medium text-white">{item.name}</div>
-                    <div className="text-sm text-gray-300">{item.distance}</div>
-                  </div>
-                </motion.div>
-              ))}
+          {/* Description Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center mb-16 mt-12"
+          >
+            <div className="max-w-4xl mx-auto bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-gray-200 shadow-xl">
+              <p className="text-lg md:text-xl text-gray-800 leading-relaxed tracking-wide">
+                La résidence SERADI, se situe dans la Commune de Ouakam du coté résidentiel. Le site est très accessible car le projet vient s'insérer à l'intérieur d'un tissu urbain relativement dense, d'une part irriguée par l'Avenue Cheikh Anta Diop et de l'autre, animé par le Lycée français Jean Mermoz.
+              </p>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+
+          {/* Environment Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex justify-center mt-16"
+          >
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-200 max-w-3xl w-full">
+              <h2 className="text-3xl font-semibold mb-8 text-gray-900 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
+                Environnement direct
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {[
+                  { name: 'Hôpitaux', distance: '500 m', icon: '🏥' },
+                  { name: 'Supermarché', distance: '200 m', icon: '🛒' },
+                  { name: 'Plage', distance: '300 m', icon: '🏖️' },
+                  { name: 'Restaurants', distance: '300 m', icon: '🍽️' },
+                  { name: 'Banques', distance: '200 m', icon: '🏦' },
+                  { name: 'Aéroport', distance: '70 km', icon: '✈️' },
+                  { name: 'Universités', distance: '1 km', icon: '🎓' },
+                  { name: 'Pharmacie', distance: '200 m', icon: '💊' },
+                ].map((item, index) => (
+                  <motion.div
+                    key={item.name}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.1 * index }}
+                    className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-gray-50 transition-all duration-300 border border-gray-100"
+                  >
+                    <span className="text-3xl">{item.icon}</span>
+                    <div className="text-center">
+                      <div className="font-semibold text-gray-900">{item.name}</div>
+                      <div className="text-sm text-gray-500 mt-1">{item.distance}</div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

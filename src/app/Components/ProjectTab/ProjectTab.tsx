@@ -45,7 +45,7 @@ const ProjectTab = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="text-xl md:text-2xl mb-8"
                 >
-                  Un projet immobilier d&apos;exception
+                  Un cadre prestigieux
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ const ProjectTab = () => {
                   className="inline-block"
                 >
                   <span className="text-lg md:text-xl font-semibold border-b-2 border-white pb-1 group-hover:border-[#FF8A3D] transition-colors duration-300">
-                    Découvrir le projet
+                    Découvrir
                   </span>
                 </motion.div>
               </div>

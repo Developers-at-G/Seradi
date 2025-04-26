@@ -19,5 +19,29 @@
     }
   }
   
+.banner-static {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 64px auto 32px auto;
+  padding: 18px 0 12px 0;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+  border: 1.5px solid #e5e7eb;
+  max-width: 1200px;
+  min-width: 200px;
+  position: relative;
+  z-index: 10;
+}
+
+.banner-static img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+  
   
   
