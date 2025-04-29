@@ -20,7 +20,7 @@ const ProjectComponent = () => {
           </h1>
           <div className="mt-4 max-w-2xl mx-auto">
             <p className="text-xl text-gray-400">
-              Une cadre prestigieux
+              Un cadre prestigieux
             </p>
           </div>
         </div>
