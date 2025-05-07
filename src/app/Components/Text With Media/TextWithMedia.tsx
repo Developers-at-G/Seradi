@@ -41,7 +41,7 @@ const TextWithMedia = () => {
               <div className="bg-gray-800/50 p-4 rounded-lg">
                 <h3 className="text-white font-medium mb-2">Rez-de-chaussée</h3>
                 <ul className="list-disc list-inside space-y-1 text-gray-300">
-                  <li>Espace lobby et salle d'attente</li>
+                  <li>Espace lobby et salle d&apos;attente</li>
                   <li>Service de conciergerie</li>
                   <li>Surveillance vidéo</li>
                   <li>Service sécurité 24h/24</li>
