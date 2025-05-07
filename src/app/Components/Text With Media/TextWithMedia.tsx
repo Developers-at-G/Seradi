@@ -32,35 +32,55 @@ const TextWithMedia = () => {
             </p>
             <div className="grid grid-cols-1 gap-4">
               <div className="bg-gray-800/50 p-4 rounded-lg">
-                <h3 className="text-white font-medium mb-2">Sous-sol & Rez-de-chaussée</h3>
+                <h3 className="text-white font-medium mb-2">Sous-sol</h3>
                 <ul className="list-disc list-inside space-y-1 text-gray-300">
-                  <li>Parking</li>
-                  <li>Conciergerie</li>
-                  <li>Piscine</li>
-                  <li>Salle de sport</li>
-                  <li>Espace commercial (293 m²)</li>
+                  <li>24 places de parking</li>
                 </ul>
               </div>
               
               <div className="bg-gray-800/50 p-4 rounded-lg">
-                <h3 className="text-white font-medium mb-2">Mezzanine</h3>
-                <p className="text-gray-300">2 plateaux de bureaux (611.06 m²)</p>
+                <h3 className="text-white font-medium mb-2">Rez-de-chaussée</h3>
                 <ul className="list-disc list-inside space-y-1 text-gray-300">
-                  <li>(379.75 m²)</li>
-                  <li>(279.58 m²)</li>
+                  <li>Espace lobby et salle d'attente</li>
+                  <li>Service de conciergerie</li>
+                  <li>Surveillance vidéo</li>
+                  <li>Service sécurité 24h/24</li>
+                  <li>Aire commerciale</li>
+                  <li>Piscine et salle de sport</li>
+                  <li>Deux ascenseurs</li>
+                  <li>Sortie de secours</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-800/50 p-4 rounded-lg">
+                <h3 className="text-white font-medium mb-2">Mezzanine</h3>
+                <ul className="list-disc list-inside space-y-1 text-gray-300">
+                  <li>2 plateaux aménageables en bureaux</li>
                 </ul>
               </div>
 
               <div className="bg-gray-800/50 p-4 rounded-lg">
                 <h3 className="text-white font-medium mb-2">Étages</h3>
-                <p className="text-gray-300">6 étages avec 24 appartements (12 F3 & 12 F4)</p>
-                <p className="text-gray-300">1 Penthouse</p>
-
+                <ul className="list-disc list-inside space-y-1 text-gray-300">
+                  <li>Étage 1 à 6 : 24 appartements (12 F4 & 12 F3)</li>
+                  <li>Étage 7 : 1 Penthouse</li>
+                </ul>
               </div>
 
               <div className="bg-gray-800/50 p-4 rounded-lg">
-                <h3 className="text-white font-medium mb-2">Terrasse</h3>
-                <p className="text-gray-300">Terrasse accessible</p>
+                <h3 className="text-white font-medium mb-2">Équipements & Sécurité</h3>
+                <ul className="list-disc list-inside space-y-1 text-gray-300">
+                  <li>Extincteurs</li>
+                  <li>Désenfumage ventilateur d'extraction</li>
+                  <li>Station de pompage</li>
+                  <li>3 réservoirs eau 8000L</li>
+                  <li>Climatisation et VMC</li>
+                  <li>Groupe électrogène</li>
+                  <li>Réseaux intérieurs (informatique, téléphonique, télévision)</li>
+                  <li>Sécurité bouche d'alimentation colonne sèche</li>
+                  <li>Détecteurs d'incendie automatiques</li>
+                  <li>Avertisseur de fumée</li>
+                </ul>
               </div>
             </div>
           </div>
