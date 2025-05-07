@@ -71,14 +71,14 @@ const TextWithMedia = () => {
                 <h3 className="text-white font-medium mb-2">Équipements & Sécurité</h3>
                 <ul className="list-disc list-inside space-y-1 text-gray-300">
                   <li>Extincteurs</li>
-                  <li>Désenfumage ventilateur d'extraction</li>
+                  <li>Désenfumage ventilateur d&apos;extraction</li>
                   <li>Station de pompage</li>
                   <li>3 réservoirs eau 8000L</li>
                   <li>Climatisation et VMC</li>
                   <li>Groupe électrogène</li>
                   <li>Réseaux intérieurs (informatique, téléphonique, télévision)</li>
-                  <li>Sécurité bouche d'alimentation colonne sèche</li>
-                  <li>Détecteurs d'incendie automatiques</li>
+                  <li>Sécurité bouche d&apos;alimentation colonne sèche</li>
+                  <li>Détecteurs d&apos;incendie automatiques</li>
                   <li>Avertisseur de fumée</li>
                 </ul>
               </div>
